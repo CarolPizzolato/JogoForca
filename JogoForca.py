@@ -51,7 +51,7 @@ grafico = ['''
            --
            '''
            ,
-            '''
+            r'''
            -----------
            |         |   
            |         O  
@@ -112,10 +112,10 @@ while vida > 0:
     else:
         letras_erradas.append(letra_escolhida.lower())
         vida -= 1
+        print (grafico[5-vida])
         print ("\033[0;31mLetra errada! Vidas restantes: {} \033[0m".format(vida))
         print (*letra_tamanho)
-        print (grafico[6-vida])
-            
+
     #se perder   
     if vida == 0:
         print ("\033[0;31mVoce perdeu! a palavra era {}\033[m".format(palavra_escolhida))
